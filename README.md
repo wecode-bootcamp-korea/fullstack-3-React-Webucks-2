@@ -5,6 +5,7 @@ Image와 mock data 하나로 공유.
 ### 2-1. Routing URL 작성 방식
 "/folder_name/list"
 <br>
+<br>
 `ex. "/mino/list"`
 ### 2-2. git commit 작성 방식
 git commit -m ""
