@@ -10,6 +10,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //종현님 components
 
 //진웅님 components
+import Login from './pages/woong/Login/Login';
+import List from './pages/woong/List/List';
+import Detail from './pages/woong/Detail/Detail';
 
 function Router() {
   return (
@@ -32,9 +35,9 @@ function Router() {
         <Route />
         <Route />
         {/* //진웅님 route */}
-        <Route />
-        <Route />
-        <Route />
+        <Route path="/woong/" element={<Login />} />
+        <Route path="/woong/list" element={<List />} />
+        <Route path="/woong/detail" element={<Detail />} />
       </Routes>
     </BrowserRouter>
   );
