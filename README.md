@@ -12,6 +12,10 @@ git commit -m ""
 * 추가: "Add: "
 * 수정: "Edit: "
 * 삭제: "Del: "
+### 2-3. branch name 작성 방식
+"/feature/3/name"
+<br>
+`ex. "/feature/3/mino"`
 
 # 3. Components
 보류
