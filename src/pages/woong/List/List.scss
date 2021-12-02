@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.List {
+  box-sizing: border-box;
+
+  .container {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1%;
+      padding: 15px 0;
+      background-color: #f4f3ec;
+
+      .webucks {
+        margin-left: 1%;
+        font-family: 'Dancing Script', cursive;
+        font-size: 30px;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      .link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        margin-right: 2%;
+        font-family: sans-serif;
+        font-size: small;
+      }
+
+      .menu {
+        color: #9a9a95;
+        list-style: none;
+      }
+    }
+
+    .category {
+      display: flex;
+      margin: 1% 0;
+      padding: 15px 0;
+      background-color: #f1f1ee;
+
+      #title1 {
+        margin-left: 1%;
+        margin-right: 10px;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+      #title2 {
+        margin-right: 10px;
+      }
+      #title3 {
+        font-family: sans-serif;
+        font-size: small;
+      }
+    }
+    .itemList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        cursor: pointer;
+        overflow: hidden;
+
+        img:hover {
+          transform: scale(1.1);
+          transition: 3s;
+        }
+      }
+      .itemName {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        cursor: pointer;
+        font-size: 15px;
+        font-family: sans-serif;
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
