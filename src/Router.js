@@ -22,9 +22,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import Detail_zzang from './pages/zzang/Detail/Detail';
 
 //진웅님 components
-// import Login_woong from './pages/woong/Login/Login';
-// import List_woong from './pages/woong/List/List';
-// import Detail_woong from './pages/woong/Detail/Detail';
+import Login_woong from './pages/woong/Login/Login';
+import List_woong from './pages/woong/List/List';
+import Detail_woong from './pages/woong/Detail/Detail';
 
 function Router() {
   return (
@@ -47,9 +47,9 @@ function Router() {
         {/* <Route path="/zzang/list" element={<List_zzang />} /> */}
         {/* <Route path="/zzang/detail" element={<Detail_zzang />} /> */}
         {/* //진웅님 route */}
-        {/* <Route path="/woong/" element={<Login_woong />} /> */}
-        {/* <Route path="/woong/list" element={<List_woong />} /> */}
-        {/* <Route path="/woong/detail" element={<Detail_woong />} /> */}
+        <Route path="/woong/" element={<Login_woong />} />
+        <Route path="/woong/list" element={<List_woong />} />
+        <Route path="/woong/detail" element={<Detail_woong />} />
       </Routes>
     </BrowserRouter>
   );
