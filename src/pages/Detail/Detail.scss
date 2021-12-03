@@ -1,0 +1,144 @@
+// Title & Location
+.title-location-container {
+  margin: 0 5.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  // Title
+  .detail-title {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+
+  // Location
+  .location {
+    margin-top: 3.5rem;
+    color: #a6a7a6;
+    font-size: 0.8rem;
+  }
+}
+
+// Image, Information & Review
+.img-and-info-container {
+  margin: 0 5.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  // Image
+  .detail-image {
+    max-width: 30vw;
+    max-height: 30vw;
+    margin-right: 2rem;
+  }
+
+  // Information & Review
+  .info-and-review-container {
+    display: flex;
+    flex-direction: column;
+
+    // Information - Title
+    .info-title {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1.5rem;
+      border-bottom: 3px solid #000;
+      .info-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        //       margin: 0;
+        .info-title-eng-name {
+          font-size: 0.8rem;
+        }
+      }
+      .heart-icon {
+        color: gainsboro;
+        font-size: 1.2rem;
+        padding-top: 0.9rem;
+      }
+    }
+
+    // Information - Description
+    .info-description {
+      padding: 1.5rem 0;
+      font-size: 1vw;
+      border-bottom: 2px solid #e5e4e5;
+    }
+
+    // Information - Nutrition Title
+    .nut-title {
+      display: flex;
+      justify-content: space-between;
+      font: {
+        size: 1.3vw;
+        weight: 500;
+      }
+      padding: 1.5rem;
+      border-bottom: 2px solid #e5e4e5;
+    }
+
+    // Information - Nutrition Information
+    .nut-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      font-size: 1.3vw;
+      .nut-container {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 18vw;
+        font-size: 1vw;
+        .nut-name {
+          padding: 0.4rem;
+        }
+        #dot-line {
+          border-right: 2px dotted #e5e4e5;
+          padding-right: 0.7rem;
+        }
+        .nut-volume {
+          text-align: end;
+        }
+      }
+    }
+
+    // Information - Allergy
+    .allergy {
+      background-color: #efefef;
+      padding: 1rem;
+      font-weight: 500;
+      border-radius: 5px;
+    }
+
+    // Review
+    .review-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding-top: 2.5rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 3px solid #e5e4e5;
+    }
+    .review-container {
+      margin: 1rem 0;
+
+      .review-comments {
+        font-size: 1vw;
+        padding-bottom: 0.3rem;
+        .reviewer {
+          font-weight: bolder;
+          padding-right: 0.3rem;
+        }
+      }
+
+      .review-input {
+        border: none;
+        border-radius: 5px;
+        margin: 1.3rem 0;
+        padding: 0.5rem;
+        background-color: #efefef;
+        color: #9f9e9e;
+        width: 100%;
+      }
+    }
+  }
+}

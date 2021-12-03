@@ -1,0 +1,37 @@
+// .TopNav {
+
+//   }
+
+.navi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 0 5.5rem;
+  padding: 0 1.2rem;
+  background-color: #f6f5ef;
+  font-size: 0.8rem;
+  .nav-title {
+    font: {
+      family: 'Dancing Script', cursive;
+      size: 1.2rem;
+      weight: bold;
+    }
+    // .menu-name {
+    //   margin: 0 5rem;
+    // }
+  }
+  .menu-lists {
+    display: flex;
+    justify-content: space-between;
+    color: #aaaaa5;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 500;
+    .menu-name {
+      padding: 0 0.7rem;
+    }
+    #last-menu-name {
+      padding-right: 0;
+    }
+  }
+}
