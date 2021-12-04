@@ -1,0 +1,93 @@
+.container-Detail {
+    margin: 0;
+}
+
+.header {
+    margin-left: 5%;
+    background-color: 	#f4f3ec;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.main_logo {
+    
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    padding: 1% 2% 1% 2%;
+
+}
+
+.category {
+    
+    list-style: none;
+    width: 30%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.2rem;
+}
+
+.category_li {
+    
+    text-decoration: none;
+    color: grey;
+    margin: auto;
+    letter-spacing: 0.1rem;
+}
+
+.coffee_category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: blue; */
+}
+
+.coldBrew {
+    /* background-color: firebrick; */
+    font-size: 30px;
+    font-weight: bold;
+    padding: 25px 0 30px 0;
+    margin-left: 5%;
+}
+
+.route {
+    /* background-color: greenyellow; */
+    margin-right: 6%;
+    padding-top: 4rem;
+    color: grey;
+}
+
+.imgAndInfo {
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: row;
+}
+
+.coffee_img {
+    background-color: darkgoldenrod;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.nameAndLike {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.coffee_info {
+    background-color: darkorange;
+}
+
+.coffee_name {
+    margin: 0 30px 20px 20px;
+    padding: 20px 20px 20px 20px 20px;
+    background-color: lightpink;
+}
+
+.footer {
+    background-color: deepskyblue;
+}
