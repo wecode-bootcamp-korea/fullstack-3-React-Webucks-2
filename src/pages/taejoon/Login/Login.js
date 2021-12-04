@@ -1,7 +1,33 @@
-import React from "react";
-import './Login.css';
+import { React, useState } from "react";
+import './Login.scss';
 
 function Login() {
+    // ID, PW 입력 값을 상태로 관리하기
+    // 참고: [상태 변수, 상태 업데이트 함수] = 상태 변경 hook(상태 변수에 할당할 기본값);
+    const [inputId, setinputId] = useState('');
+    const [inputPw, setinputPw] = useState('');
+    // console.log(inputId + '에 @ 있음? ');
+
+    const loginBTNStyle = {
+        // state에 골뱅이 있음? -> 있으면 색상 변환
+        backgroundColor: inputId.includes('@')
+            ? (inputPw.length > 5
+                ? 'blue' : '#aed4ea')
+            : '#aed4ea',
+    };
+
+    // onChange Id 이벤트 발생 시 호출할 함수
+    const handleIdInput = (e) => {
+        // 이벤트 발생 시 state로 지정한 inputID 업데이트
+        setinputId(e.target.value);
+
+    };
+    // onChange Pw 이벤트 발생 시 호출할 함수
+    const handlePwInput = (e) => {
+        setinputPw(e.target.value);
+
+    }
+
     return (
         <>
             <div className="container-Login">
@@ -10,14 +36,15 @@ function Login() {
                 </section>
                 <div className="login">
                     <form className="loginForm" action="" method="get">
-                        <input className="login_input" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
+                        {/* onChange 이벤트 발생 시 handleIdInput 호출하기 */}
+                        <input className="login_input" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" onChange={handleIdInput} />
                         <p className="alert"></p>
-                        <input className="login_input" type="password" placeholder="비밀번호" />
+                        <input className="login_input" type="password" placeholder="비밀번호" onChange={handlePwInput} />
                         <p className="alert"></p>
                     </form>
                 </div>
                 <div className="loginBtn">
-                    <button className="login_btn" type="button">로그인</button>
+                    <button className="login_btn" style={loginBTNStyle} type="button">로그인</button>
                 </div>
                 <footer className="lostPw">
                     <a className="lost_pw" href="#">비밀번호를 잊으셨나요?</a>

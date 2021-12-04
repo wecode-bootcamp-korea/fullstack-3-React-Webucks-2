@@ -1,5 +1,4 @@
-import react from "react";
-import "./Detail.css";
+import "./Detail.scss";
 import TopNav from "../components/TopNav";
 
 function Detail() {

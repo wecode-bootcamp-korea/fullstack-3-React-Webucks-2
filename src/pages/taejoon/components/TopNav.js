@@ -1,5 +1,3 @@
-import react from "react";
-
 function TopNav() {
     return (
         <div className="header">

@@ -1,5 +1,4 @@
-import react from "react";
-import "./List.css";
+import "./List.scss";
 import TopNav from "../components/TopNav";
 
 function List() {
