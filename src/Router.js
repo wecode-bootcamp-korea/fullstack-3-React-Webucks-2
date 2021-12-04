@@ -18,13 +18,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //종현님 components
 // import Login_zzang from './pages/zzang/Login/Login';
-// import List_zzang from './pages/zzang/List/List';
+// import List_zzang from './pages/zzang/List/List'
 // import Detail_zzang from './pages/zzang/Detail/Detail';
 
 //진웅님 components
-import Login_woong from './pages/woong/Login/Login';
-import List_woong from './pages/woong/List/List';
-import Detail_woong from './pages/woong/Detail/Detail';
+import Login_woong from './pages/woong/Login/Login_woong';
+import List_woong from './pages/woong/List/List_woong';
+import Detail_woong from './pages/woong/Detail/Detail_woong';
 
 function Router() {
   return (
