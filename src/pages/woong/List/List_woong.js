@@ -1,7 +1,7 @@
 import React from 'react';
 import './List.scss';
 import TopNav from '../components/TopNav';
-import ColdBrewCard from '../components/ColdBrewCard';
+import CoffeeCard from '../components/CoffeeCard';
 import { useState, useEffect } from 'react';
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -32,7 +32,7 @@ function List() {
             <span id="title3">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
           </div>
 
-          <div className="itemList">{coffees[0] ? coffees[0].coldBrewCoffee.map((coffee) => <ColdBrewCard coffee={coffee} key={coffee.id} />) : null}</div>
+          <div className="itemList">{coffees[0] && coffees[0].coldBrewCoffee.map((coffee) => <CoffeeCard coffee={coffee} key={coffee.id} />)}</div>
 
           <div className="category">
             <span id="title1">브루드 커피</span>
@@ -40,7 +40,7 @@ function List() {
             <span id="title3">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
           </div>
 
-          <div className="itemList">{coffees[1] ? coffees[1].brewedCoffee.map((coffee) => <ColdBrewCard coffee={coffee} key={coffee.id} />) : null}</div>
+          <div className="itemList">{coffees[1] && coffees[1].brewedCoffee.map((coffee) => <CoffeeCard coffee={coffee} key={coffee.id} />)}</div>
         </div>
       </div>
     </div>

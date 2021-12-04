@@ -1,9 +1,7 @@
 import React from 'react';
-import List from '../List/List_woong';
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function ColdBrewCard(props) {
+function CoffeeCard(props) {
   return (
     <div>
       <Link to="/woong/detail">
@@ -19,4 +17,4 @@ function ColdBrewCard(props) {
     </div>
   );
 }
-export default ColdBrewCard;
+export default CoffeeCard;

@@ -44,12 +44,21 @@
           background-color: gainsboro;
         }
 
-        button {
+        .btnUnable {
           padding: 10px 0;
           background-color: #509be8;
           border: none;
           border-radius: 5px;
           opacity: 0.5;
+          color: white;
+        }
+
+        .btnAble {
+          padding: 10px 0;
+          background-color: #509be8;
+          border: none;
+          border-radius: 5px;
+          opacity: 1;
           color: white;
         }
       }
