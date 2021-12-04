@@ -109,12 +109,13 @@
           cursor: pointer;
         }
 
-        #unliked {
+        .unliked {
           z-index: 100;
           background-color: white;
+          opacity: 1;
         }
 
-        #liked {
+        .liked {
           z-index: 80;
           color: red;
         }

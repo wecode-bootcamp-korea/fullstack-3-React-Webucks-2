@@ -1,10 +1,17 @@
 import React from 'react';
 import './Detail.scss';
-// import { FaHeart } from 'react-icons/fa';
-// import { FaRegHeart } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
+import { FaRegHeart } from 'react-icons/fa';
 import TopNav from '../components/TopNav';
+import { useState } from 'react';
 
 function Detail() {
+  const [state, setState] = useState();
+
+  const clickLike = () => {
+    setState(!state);
+  };
+
   return (
     <div className="Detail">
       <div>
@@ -16,7 +23,7 @@ function Detail() {
       </header>
       <section>
         <aside>
-          <img alt="토피 넛 라떼" src="/images/coffee1.jpg" />
+          <img alt="토피 넛 라떼" src="../../public/images.details.jpeg" />
         </aside>
         <main>
           <section className="titleWrapper">
@@ -25,8 +32,9 @@ function Detail() {
               <p id="engName">Toffee Nut Cold Brew</p>
             </section>
             <section id="heartIcon">
-              {/* <FaRegHeart className="fa-heart" id="unliked" style={{ opacity: 1 }} /> */}
-              {/* <FaHeart className="fa-heart" id="liked" /> */}
+              <div className="likeIcon" onClick={clickLike}>
+                {state ? <FaHeart className="liked" /> : <FaRegHeart className="unliked" />}
+              </div>
             </section>
           </section>
           <section className="coffeeDetail">
