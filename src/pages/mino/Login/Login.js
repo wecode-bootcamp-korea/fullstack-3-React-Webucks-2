@@ -8,9 +8,9 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const goToMain = () => {
-    navigate("/mino/list");
-  }
+  // const goToMain = () => {
+  //   navigate("/mino/list");
+  // }
 
 
 const [id, setId] = useState('');
@@ -26,15 +26,17 @@ const handlePwInput = (e) => {
 }
 
 
-    // 실제 활용 예시
-  // const goToMain = () => {
-  //   if(response.message === "valid user"){
-  //     navigate('/main');
-  //   } else {
-  //     alert("가입된 회원이 아닙니다. 회원가입을 먼저 해주세요.")
-  //     navigate('/signup');
-  //   }
-  // }
+const valid = id.includes('@') && pw.length > 7;
+
+const goToMain = () => {
+  if(id.includes('@')===false){
+    alert ("이메일 주소가 아닙니다.")
+  } else if (pw.length < 8) {
+    alert("8자리 이상 작성해주세요.")
+  } else {
+    navigate('/mino/List');
+  }
+}
 
 
 
@@ -44,12 +46,12 @@ const handlePwInput = (e) => {
         <h1 className="title">WeBucks</h1>
         <form>
           <div className="user-id">
-            <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" onChange={handleIdInput} />
+            <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" onChange={handleIdInput} style={{ borderColor: id.includes('@') ? '' : 'red'}}/>
           </div>
           <div className="user-pwd">
-            <input type="text" placeholder= "비밀번호" onChange={handlePwInput} />
+            <input type="text" placeholder= "비밀번호" onChange={handlePwInput} style={{ borderColor: pw.length < 8 ? 'red' : '' }} />
           </div>
-          <button className="login-btn" onClick={goToMain}>로그인</button>
+          <button className="login-btn" onClick={goToMain} style={{ backgroundColor: valid ? '#60aded' : '#d4e6f8' }}>로그인</button>
         </form>
         <p className="find-pwd">
           <a href="#" className="link">비밀번호를 잊으셨나요?</a>
