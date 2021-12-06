@@ -27,16 +27,16 @@
 .brewed-coffee-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  // align-content: space-between;
+  justify-content: flex-start;
+  column-gap: 5.1rem;
   text-align: center;
   margin: 1rem 5.5rem;
-  width: fit-content;
-  height: fit-content;
+  width: inherit;
 }
 
 .img-container {
   display: flex;
+  position: static;
   flex-direction: column;
   flex-basis: 20%;
   margin-bottom: 1.5rem;

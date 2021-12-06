@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/reset.scss";
+import "../../../styles/reset.scss";
 import "./Detail.scss";
 import TopNav from "../TopNav";
 import Footer from "../Footer";

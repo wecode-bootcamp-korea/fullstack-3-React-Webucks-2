@@ -1,10 +1,21 @@
-import React from "react";
-import "../../styles/reset.scss";
+import React, { useState, useEffect } from "react";
+import "../../../styles/reset.scss";
 import "./List.scss";
 import TopNav from "../TopNav";
 import {FaCoffee} from "react-icons/fa";
+import CoffeeCard from "./CoffeeCard"
+
+
 
 function List() {
+  const [menuData, setMenuData] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/mockdata.json')
+    .then((res)=>res.json())
+    .then((res) => setMenuData(res));
+  }, []);
+
   return (
     <>
     {/* Navbar */}
@@ -17,14 +28,21 @@ function List() {
         <span className="title-description">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</span>
       </section>
 
+
     {/* Cold Brew Coffee Lists */}
     <section className="cold-brew-coffee-container">
-      <article className="img-container" id="first-img-container">
+     {menuData.coldBrewCoffee && menuData.coldBrewCoffee.map((e, i) => {
+            return <CoffeeCard key={i} item={e} />;
+          })}
+    </section>
+
+
+      {/* <article className="img-container" id="first-img-container">
           <img className="coffee-image" src="../../images/coldbrew.jpeg" alt="coldbrew" />
           <h3>콜드 브루</h3>
-      </article>
+      </article> */}
 
-        <article className="img-container">
+        {/* <article className="img-container">
             <img className="coffee-image" src="../../images/nitro_coldbrew.jpeg" alt="nitro coldbrew" />
           <h3>나이트로 콜드 브루</h3>
         </article>
@@ -75,9 +93,9 @@ function List() {
 
         <article className="img-container">
             <img className="coffee-image" src="#" alt="" />
-        </article>
+        </article> */}
 
-    </section>
+    {/* </section> */}
 
     {/* Brewed Coffee Title */}
     <section className="list-title">
@@ -88,7 +106,11 @@ function List() {
 
     {/* Brewed Coffee Lists */}
     <section className="brewed-coffee-container">
-        <article className="img-container" id="first-img-container">
+      {menuData.brewedCoffee && menuData.brewedCoffee.map((e, i) => {
+      return <CoffeeCard key={i} item={e} />;
+      })}
+      
+        {/* <article className="img-container" id="first-img-container">
           <img className="coffee-image" src="./images/iced_coffee.jpeg" alt="iced coffee" />
           <h3>아이스 커피</h3>
         </article>
@@ -104,7 +126,7 @@ function List() {
 
         <article className="img-container">
           <img className="coffee-image" src="#" alt="" />
-        </article>
+        </article> */}
 
     </section>
   </>
