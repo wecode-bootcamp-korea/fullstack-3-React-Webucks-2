@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../styles/reset.scss";
 import "./Login.scss"
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,20 @@ function Login() {
 
   const goToMain = () => {
     navigate("/mino/list");
-  };
+  }
+
+
+const [id, setId] = useState('');
+
+const handleIdInput = (e) => {
+  setId(e.target.value);
+}
+
+const [pw, setPw] = useState('');
+
+const handlePwInput = (e) => {
+  setPw(e.target.value);
+}
 
 
     // 실제 활용 예시
@@ -31,10 +44,10 @@ function Login() {
         <h1 className="title">WeBucks</h1>
         <form>
           <div className="user-id">
-            <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
+            <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" onChange={handleIdInput} />
           </div>
           <div className="user-pwd">
-            <input type="text" placeholder= "비밀번호" />
+            <input type="text" placeholder= "비밀번호" onChange={handlePwInput} />
           </div>
           <button className="login-btn" onClick={goToMain}>로그인</button>
         </form>

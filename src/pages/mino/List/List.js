@@ -31,7 +31,7 @@ function List() {
 
     {/* Cold Brew Coffee Lists */}
     <section className="cold-brew-coffee-container">
-     {menuData.coldBrewCoffee && menuData.coldBrewCoffee.map((e, i) => {
+     {menuData[0] && menuData[0].coldBrewCoffee.map((e, i) => {
             return <CoffeeCard key={i} item={e} />;
           })}
     </section>
@@ -106,7 +106,7 @@ function List() {
 
     {/* Brewed Coffee Lists */}
     <section className="brewed-coffee-container">
-      {menuData.brewedCoffee && menuData.brewedCoffee.map((e, i) => {
+      {menuData[1] && menuData[1].brewedCoffee.map((e, i) => {
       return <CoffeeCard key={i} item={e} />;
       })}
       
