@@ -1,7 +1,10 @@
 import "./List.scss";
 import TopNav from "../components/TopNav";
+import CoffeeList from "../components/CoffeeList";
 
 function List() {
+
+
     return (
         <>
             <TopNav />
@@ -12,7 +15,8 @@ function List() {
             </div>
             <div className="coffeeImgDiv">
                 <ul className="coffeeImgUl">
-                    <li className="coffeeImgLi">
+                    <CoffeeList/>
+                    {/* <li className="coffeeImgLi">
                         <img className="pngImg" src="/images/coffee1.png" alt="" />
                     </li>
                     <li className="coffeeImgLi">
@@ -41,7 +45,7 @@ function List() {
                     </li>
                     <li className="coffeeImgLi">
                         <img className="pngImg" src="/images/coffee10.png" alt="" />
-                    </li>
+                    </li> */}
 
                 </ul>
             </div>
@@ -60,7 +64,7 @@ function List() {
                     </li>
                 </ul>
             </div>
-    
+
         </>
     );
 }
