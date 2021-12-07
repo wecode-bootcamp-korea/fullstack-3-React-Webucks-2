@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  font-weight: bold;
+  --mainBoxColor: white;
+  --backgroundColor: #eeefef;
+  --borderColor: lightgrey;
+  --inputBoxColor: #aaaaaa;
+  --buttonColor: #aed3ea;
+  --warningColor: #4c8bb6;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+.mainBox,
+.wrapper,
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo,
+.form-div,
+.inputBox,
+.buttonBox {
+  width: 100%;
+}
+
+.mainBox {
+  width: 50%;
+  height: 600px;
+  margin: 5% 25%;
+  background-color: var(--mainBoxColor);
+  border: 3px solid var(--borderColor);
+  border-radius: 5px;
+}
+
+.wrapper {
+  width: 70%;
+  height: 200px;
+}
+
+.logo {
+  margin-top: 50px;
+}
+
+.inputBox,
+.buttonBox {
+  height: 45px;
+  margin: 13px 10%;
+  padding: 0 10px;
+  background-color: var(--backgroundColor);
+  border: 2px solid var(--borderColor);
+  border-radius: 8px;
+}
+
+#inputId,
+#inputPw {
+  border-radius: 5px;
+}
+
+#inputId::placeholder,
+#inputPw::placeholder {
+  color: var(--inputBoxColor);
+}
+
+.forgotPw {
+  padding-top: 60px;
+  color: var(--warningColor);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.buttonBox {
+  color: var(--mainBoxColor);
+  background-color: var(--buttonColor);
+  border: none;
+  font-size: 15px;
+}
+
+.buttonBoxloginButton:hover {
+  cursor: pointer;
+}
