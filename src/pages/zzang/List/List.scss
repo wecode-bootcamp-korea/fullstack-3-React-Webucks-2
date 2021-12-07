@@ -1,0 +1,162 @@
+// html, body, div, span, applet, object, iframe,
+// h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+// a, abbr, acronym, address, big, cite, code,
+// del, dfn, em, img, ins, kbd, q, s, samp,
+// small, strike, strong, sub, sup, tt, var,
+// b, u, i, center,
+// dl, dt, dd, ol, ul, li,
+// fieldset, form, label, legend,
+// table, caption, tbody, tfoot, thead, tr, th, td,
+// article, aside, canvas, details, embed,
+// figure, figcaption, footer, header, hgroup,
+// menu, nav, output, ruby, section, summary,
+// time, mark, audio, video {
+// 	margin: 0;
+// 	padding: 0;
+// 	border: 0;
+// 	font-size: 100%;
+// 	font: inherit;
+// 	vertical-align: baseline;
+// }
+// /* HTML5 display-role reset for older browsers */
+// article, aside, details, figcaption, figure,
+// footer, header, hgroup, menu, nav, section {
+// 	display: block;
+// }
+// body {
+// 	line-height: 1;
+// }
+ol, ul {
+	list-style: none;
+}
+// blockquote, q {
+// 	quotes: none;
+// }
+// blockquote:before, blockquote:after,
+// q:before, q:after {
+// 	content: '';
+// 	content: none;
+// }
+// table {
+// 	border-collapse: collapse;
+// 	border-spacing: 0;
+// }
+
+.container{
+    display: flex;
+    justify-content: space-between;
+
+    .List_wrap{
+        box-sizing: border-box;
+        
+        li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        /* 상단 네비바 */
+
+        /* .header{
+
+        } */
+
+        /* 상단 네비바 끝 */
+
+        /* 서브타이틀 */
+        .sub_title{
+            font-size: 20px;
+
+            h3{
+                margin-left: 110px;
+                display: block;
+            }
+        }
+        /* 서브타이틀 끝 */
+
+            /* 아이템 리스트 */
+            .item_list_wrap{
+                width: 95%;
+                height: 100vh;
+
+                dt{
+                    width: 90%;
+                    margin-left: 5%;
+                    display: flex;
+                    font-size: 20px;
+                    align-items: center;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    padding-left: 3%;
+                    background-color: #F6F5EF;
+                
+                    a{
+                        color: black;
+                    }
+                }
+            
+
+                .list{
+                    
+                    margin-left: 5%;
+                    padding-left: 0;
+                }
+
+                .item{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 1rem;
+                    overflow: hidden;
+                    margin-right: 20px;
+
+                    img:hover{
+                        transform:scale(1.1);
+                    }
+                    dd{
+                        width: 30vh;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                }
+
+                .list_2{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-gap: 1rem;
+                    margin-left: 5%;
+                    padding-left: 0;
+                }
+            }
+                /* 아이템리스트 끝 */
+
+                /* 푸터 시작 */
+                .footer{
+                    width: 100%;
+                    height: 400px;
+                    padding-top: 40px;
+                    color: white;
+                    background-color: black;
+                    margin-top: 10%;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
+                
+                    .footer_wrap{
+                        display: flex;
+                        margin-left: 15%;
+                        ul{
+                            margin-right: 10px;
+                
+                            li{
+                                display: flex;
+                                margin-bottom: 10px;
+                                justify-content: space-around;
+                            }
+                        }
+                    }
+                }
+            
+    }
+}

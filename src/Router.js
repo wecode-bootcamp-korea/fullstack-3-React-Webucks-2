@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+
 //효상님 components
 // import Login_hyosang from './pages/hyosang/Login/Login';
 // import List_hyosang from './pages/hyosang/List/List';
@@ -17,9 +18,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import Detail_taejoon from './pages/taejoon/Detail/Detail';
 
 //종현님 components
-// import Login_zzang from './pages/zzang/Login/Login';
-// import List_zzang from './pages/zzang/List/List';
-// import Detail_zzang from './pages/zzang/Detail/Detail';
+import Login_zzang from './pages/zzang/Login/Login';
+import List_zzang from './pages/zzang/List/List';
+import Detail_zzang from './pages/zzang/Detail/Detail';
 
 //진웅님 components
 // import Login_woong from './pages/woong/Login/Login';
@@ -43,9 +44,9 @@ function Router() {
         {/* <Route path="/taejoon/list" element={<List_taejoon />} /> */}
         {/* <Route path="/taejoon/detail" element={<Detail_taejoon />} /> */}
         {/* //종현님 route */}
-        {/* <Route path="/zzang/" element={<Login_zzang />} /> */}
-        {/* <Route path="/zzang/list" element={<List_zzang />} /> */}
-        {/* <Route path="/zzang/detail" element={<Detail_zzang />} /> */}
+        <Route path="/zzang" element={<Login_zzang />} /> 
+        <Route path="/zzang/list" element={<List_zzang />} />
+        <Route path="/zzang/detail" element={<Detail_zzang />} />
         {/* //진웅님 route */}
         {/* <Route path="/woong/" element={<Login_woong />} /> */}
         {/* <Route path="/woong/list" element={<List_woong />} /> */}
