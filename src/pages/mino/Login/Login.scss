@@ -1,3 +1,4 @@
+// 로그인 기본 스타일
 .Login-setup {
   display: flex;
   height: 100vh;
@@ -11,7 +12,7 @@
 }
 
 .container {
-  // container basic styles
+  // Container 기본 스타일
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -22,6 +23,8 @@
   border: 3px solid #ddd;
   border-radius: 5px;
   background: #ffffff;
+
+  // 제목 스타일
   .title {
     margin-top: 2rem;
     margin-bottom: 0.5em;
@@ -32,7 +35,8 @@
       weight: bold;
     }
   }
-  // input id & pwd styles
+
+  // Input id & pwd styles
   form {
     input {
       margin: 0.5rem;
@@ -44,7 +48,8 @@
       background: #f7f7f7;
       transition: background 0.2s, border-color 0.2s;
     }
-    // button styles
+
+    // 버튼 스타일
     .login-btn {
       margin: 0.5rem;
       width: 95%;
@@ -59,6 +64,7 @@
       background-color: #60aded;
     }
   }
+
   // "비밀번호를 잊으셨나요?" style
   .find-pwd {
     text-align: center;

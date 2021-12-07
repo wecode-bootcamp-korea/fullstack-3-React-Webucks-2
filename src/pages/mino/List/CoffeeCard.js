@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {FaRegHeart} from "react-icons/fa";
 
 export default function CoffeeCard (props) {

@@ -1,8 +1,5 @@
-// .TopNav {
-
-//   }
-
 .navi {
+  // TopNav 전체적인 기본 스타일
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,10 +14,9 @@
       size: 1.2rem;
       weight: bold;
     }
-    // .menu-name {
-    //   margin: 0 5rem;
-    // }
   }
+
+  // 메뉴 리스트 스타일
   .menu-lists {
     display: flex;
     justify-content: space-between;

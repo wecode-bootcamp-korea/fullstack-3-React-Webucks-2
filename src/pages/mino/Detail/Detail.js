@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../../styles/reset.scss";
 import "./Detail.scss";
 import TopNav from "../TopNav";
 import Footer from "../Footer";
 import {FaRegHeart} from "react-icons/fa";
+import {FaHeart} from "react-icons/fa";
+import Comment from "./Comment";
+
 
 function Detail() {
+
+  const [like, setLike] = useState(false);
+
+  const [commentsData, setCommentsData] = useState([]);
+
+    useEffect(() => {
+    fetch('http://localhost:3000/data/comment_mino.json', {
+      method: 'GET',
+    })
+    .then((res)=>res.json())
+    .then((res) => { setCommentsData(res);
+    });
+  }, []);
+
+  const [addComment, setAddComment] = useState([]);
+
+  const submitComment = (e) => {
+    if (e.keyCode === 13 && e.target.value.length !== 0) {
+      let add = [...addComment];
+      add.push(e.target.value);
+      setAddComment(add);
+      e.target.value = "";
+    }
+  };
+
   return (
     <>
     <TopNav />
@@ -37,7 +65,9 @@ function Detail() {
               화이트 초콜릿 모카
               <p className="info-title-eng-name">White Chocolate Mocha</p>
             </h2>
-            <FaRegHeart className="heart-icon"/>
+            <div className='heart-icon' onClick={() => setLike((prevLike) => !prevLike)} >
+              { like ? <FaHeart style={{ color: 'red' }} />  : <FaRegHeart style={{ color: 'gainsboro'}} /> }
+            </div>
           </article>
 
           {/* Information - Description */}
@@ -89,7 +119,18 @@ function Detail() {
           <h2 className="review-title">리뷰</h2>
           {/* Review Container */}
           <section className="review-container">
-            <p className="review-comments">
+            {commentsData.map((commentData, index) => {
+              return  <Comment 
+                        key={index}
+                        text={commentData.text} 
+                        userId={commentData.userId} />;
+            })}
+
+            {addComment.map((e, i) => {
+              return (
+                <Comment key={i} text={e} index={i} addComment={addComment} setAddComment={setAddComment} />);
+            })}
+            {/* <p className="review-comments">
               <span className="reviewer">coffee-lover</span>
               너무 맛있어요!
             </p>
@@ -101,14 +142,14 @@ function Detail() {
               <span className="reviewer">legend_dev</span>
               진짜 화이트 초콜릿 모카는 전설이다ㅏ. 진짜 화이트 초콜릿 모카는
               전설이다. 진짜 화이트 초...
-            </p>
-            <form action="">
+            </p> */}
+
               <input
                 type="text"
                 className="review-input"
                 placeholder="리뷰를 입력해주세요."
+                onKeyDown={(e) => { submitComment(e); }}
               />
-            </form>
           </section>
         </div>
       </section>
@@ -116,5 +157,6 @@ function Detail() {
     </>
   )
 }
+
 
 export default Detail

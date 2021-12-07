@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../../styles/reset.scss";
 import "./Login.scss"
 import { useNavigate } from 'react-router-dom';
 
@@ -46,12 +45,26 @@ const goToMain = () => {
         <h1 className="title">WeBucks</h1>
         <form>
           <div className="user-id">
-            <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" onChange={handleIdInput} style={{ borderColor: id.includes('@') ? '' : 'red'}}/>
+            <input
+              type="text"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+              onChange={handleIdInput}
+              style={{ borderColor: id.includes('@') ? 'chartreuse' : 'red'}}
+            />
           </div>
           <div className="user-pwd">
-            <input type="text" placeholder= "비밀번호" onChange={handlePwInput} style={{ borderColor: pw.length < 8 ? 'red' : '' }} />
+            <input
+              type="password"
+              placeholder= "비밀번호"
+              onChange={handlePwInput}
+              style={{ borderColor: pw.length > 7 ? 'chartreuse' : 'red' }}
+            />
           </div>
-          <button className="login-btn" onClick={goToMain} style={{ backgroundColor: valid ? '#60aded' : '#d4e6f8' }}>로그인</button>
+          <button
+            className="login-btn"
+            onClick={goToMain}
+            style={{ backgroundColor: valid ? '#60aded' : '#d4e6f8' }}>
+          로그인</button>
         </form>
         <p className="find-pwd">
           <a href="#" className="link">비밀번호를 잊으셨나요?</a>

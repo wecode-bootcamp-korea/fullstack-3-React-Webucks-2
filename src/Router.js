@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import Detail_hyosang from './pages/hyosang/Detail/Detail';
 
 //민호님 components
-import TopNav_mino from './pages/mino/TopNav';
-import Footer_mino from './pages/mino/Footer'
 import Login_mino from './pages/mino/Login/Login'
 import List_mino from './pages/mino/List/List'
 import Detail_mino from './pages/mino/Detail/Detail';

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/reset.scss";
+// import "../../styles/reset.scss";
 import "./TopNav.scss";
 
 function TopNav() {
