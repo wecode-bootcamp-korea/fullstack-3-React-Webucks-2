@@ -61,7 +61,7 @@ function Login() {
                 </footer>
             </div>
         </>
-    );
+    )
 }
 
 export default Login;
