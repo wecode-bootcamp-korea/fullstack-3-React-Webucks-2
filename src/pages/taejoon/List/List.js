@@ -1,9 +1,19 @@
 import "./List.scss";
 import TopNav from "../components/TopNav";
-import CoffeeList from "../components/CoffeeList"
+import React, { useEffect, useState } from 'react';
+import CoffeeCard from "../components/CoffeeCard";
 
 
 function List() {
+
+    //coffee List state 선언
+    const [coffeeList, setCoffeeList] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/data/mockdata.json")
+            .then(res => res.json())
+            .then(data => setCoffeeList(data))
+    }, []);
 
 
     return (
@@ -16,39 +26,9 @@ function List() {
             </div>
             <div className="coffeeImgDiv">
                 <ul className="coffeeImgUl">
-                    <CoffeeList/>
-                    
-                    {/* <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee1.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee2.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee3.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee4.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee5.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee6.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee7.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee8.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee9.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee10.png" alt="" />
-                    </li> */}
-
+                    {coffeeList.coldBrewCoffee && coffeeList.coldBrewCoffee.map(coffeeList => (
+                        <CoffeeCard data = {coffeeList} key = {coffeeList.id}/>
+                    ))}
                 </ul>
             </div>
             <div className="coffeeType">
@@ -58,12 +38,9 @@ function List() {
             </div>
             <div className="coffeeImgDiv">
                 <ul className="coffeeImgUl">
-                    {/* <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee1.png" alt="" />
-                    </li>
-                    <li className="coffeeImgLi">
-                        <img className="pngImg" src="/images/coffee2.png" alt="" />
-                    </li> */}
+                    {coffeeList.brewedCoffee && coffeeList.brewedCoffee.map(coffeeList => (
+                        <CoffeeCard data = {coffeeList} key = {coffeeList.id}/>
+                    ))}
                 </ul>
             </div>
 
