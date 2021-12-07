@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from 'react' 
 
-// useEffect(() => {
-//   fetch("http://localhost:3000/data/mockdata.json")
-//   .then((res) => res.json()) 
-//   .then((data) => {
-//     setCoffeeCard(data);       
-//   });
-// }, []);
-
 function CoffeeCard(props) { 
     const [detailSrc, setDetailSrc] = useState('#'); 
 

@@ -1,7 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-// loginIsValid={ isValid } btnIsDisabled={ isDisabled } btnBg={ BgColor } 
-
 function LoginButton(props) {
     const navigate = useNavigate(); // 함수를 반환하는 함수
     const isValid = props.loginIsValid; 
