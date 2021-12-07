@@ -3,7 +3,7 @@ import { FiHeart } from 'react-icons/fi';
 
 function Detail() {
     return (
-      <div className = "Detail-div">
+      <div className = "Detail">
         <header className = "main-header"> 
           <div className = "logo-wrapper">
             <span className = "main-logo">WeBucks</span> 

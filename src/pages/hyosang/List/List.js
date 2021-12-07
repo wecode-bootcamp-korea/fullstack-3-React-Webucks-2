@@ -14,7 +14,7 @@ function List() {
     }, []);
 
     return (
-      <div className = "List-div">
+      <div className = "List">
         <header className = "main-header"> 
           <div className = "logo-wrapper">
             <span className = "main-logo">WeBucks</span> 

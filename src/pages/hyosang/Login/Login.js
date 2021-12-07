@@ -4,7 +4,7 @@ import LoginForm from '../components/LoginForm';
 
 function Login() {  
   return (  
-      <section className = "mainBox"> 
+      <section className = "Login"> 
         <div className = "wrapper"> 
           <img className = "logo" src = "/images/WeBucksBig.png" alt = "WeBucks"/>
         </div> 
