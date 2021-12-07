@@ -119,10 +119,11 @@ $footerBg: rgb(34, 34, 34);
   .icon-wrapper {
     display: flex;
     align-items: center;
-    padding-right: 15px;
+    padding-right: 10px;
   }
 
-  .heart-icon {
+  .heartIcon {
+    width: 30px;
     height: 20px;
   }
 

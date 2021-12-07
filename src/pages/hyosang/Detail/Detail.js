@@ -1,7 +1,14 @@
 import './Detail.scss';
-import { FiHeart } from 'react-icons/fi';
+import { useState } from 'react';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
 function Detail() {
+    const [likeState, setLikeState] = useState(); 
+
+    const setUpLike = () => {
+        setLikeState(!likeState); 
+    }; 
+
     return (
       <div className = "Detail">
         <header className = "main-header"> 
@@ -42,9 +49,9 @@ function Detail() {
               <div>  
                 <h2>화이트 초콜릿 모카</h2>
                 <h5>White Chocolate Mocha</h5> 
-              </div>
-              <div className = "icon-wrapper"> 
-                <a href = "#"><FiHeart /></a>
+              </div> 
+              <div className = "icon-wrapper" onClick={setUpLike}> 
+                {likeState ? <AiFillHeart className="heartIcon" style={{ color: 'red' }}/> : <AiOutlineHeart className="heartIcon"/> }
               </div> 
             </header>
             <section className = "product-section">
