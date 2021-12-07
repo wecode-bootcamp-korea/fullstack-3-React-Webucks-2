@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.scss';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
 function Login() {
   const navigate = useNavigate();
@@ -33,12 +32,14 @@ function Login() {
                 id="account"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
                 onChange={handleIdInput}
+                style={{ borderColor: id.includes('@') && 'green' }}
               />
               <input
                 type="password"
                 id="password"
                 placeholder="비밀번호"
                 onChange={handlePwInput}
+                style={{ borderColor: pw.length >= 5 && 'green' }}
               />
               <button
                 className="btnUnable"
@@ -50,9 +51,9 @@ function Login() {
               </button>
             </form>
           </section>
-          <a className="findPw" href="#">
-            비밀번호를 잊으셨나요?
-          </a>
+          <Link to="/">
+            <div className="findPw">비밀번호를 잊으셨나요?</div>
+          </Link>
         </div>
       </div>
     </div>

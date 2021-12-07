@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Detail.scss';
 import TopNav from '../components/TopNav';
 import Comment from './Comment';
 import Footer from '../components/Footer';
 import { FaHeart } from 'react-icons/fa';
 import { FaRegHeart } from 'react-icons/fa';
-import { useState } from 'react';
 
 function Detail() {
   const [state, setState] = useState();
@@ -20,7 +19,7 @@ function Detail() {
     setComment(e.target.value);
   };
 
-  const submitCommnet = e => {
+  const submitComment = e => {
     e.preventDefault();
     if (comment === '') {
       return;
@@ -105,7 +104,7 @@ function Detail() {
           <section>
             <div className="allregic">알레르기 유발 요인 : 우유</div>
           </section>
-          <div onSubmit={submitCommnet}>
+          <div onSubmit={submitComment}>
             <form className="review">
               <p className="reviewTitle">리뷰</p>
               <Comment commentArray={commentArray} />

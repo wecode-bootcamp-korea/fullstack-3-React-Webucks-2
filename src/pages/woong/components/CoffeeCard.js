@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function CoffeeCard(props) {
+function CoffeeCard({ coffee }) {
   return (
-    <div>
-      <Link to="/woong/detail">
-        <div className="item">
-          <img alt={props.coffee.title} src={props.coffee.img} id="toffeePic" />
-        </div>
-      </Link>
-      <div className="itemName">
-        <Link to="/woong/detail" id="toffeeName">
-          {props.coffee.title}
+    <div className="CoffeeCard">
+      <div className="item">
+        <Link to="/woong/detail">
+          <img alt={coffee.title} src={coffee.img} />
         </Link>
+      </div>
+      <div className="itemName">
+        <Link to="/woong/detail">{coffee.title}</Link>
       </div>
     </div>
   );

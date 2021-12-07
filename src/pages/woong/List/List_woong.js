@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import TopNav from '../components/TopNav';
 import CoffeeCard from '../components/CoffeeCard';
 import Footer from '../components/Footer';
-import { useState, useEffect } from 'react';
 import { FaCoffee } from 'react-icons/fa';
 import './List.scss';
 
