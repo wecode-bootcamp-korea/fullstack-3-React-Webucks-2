@@ -8,7 +8,6 @@ function CoffeeList() {
     useEffect(() => {
         fetch("http://localhost:3000/data/mockdata.json").then(res => res.json()).then(data => {setcoffeeList(data)});
     }, [])
-    console.log(`####HERE: ${coffeeList}`)
 
     return (coffeeList.map(coffeeData => {
         <CoffeeCard

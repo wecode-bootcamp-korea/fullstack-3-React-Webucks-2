@@ -3,11 +3,11 @@
 }
 
 .header {
-    margin-left: 5%;
     background-color: 	#f4f3ec;
-    width: 90%;
     display: flex;
     justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
     
 }
 .main_logo {
@@ -23,10 +23,10 @@
 .category {
     
     list-style: none;
-    width: 30%;
     font-size: 0.9rem;
     display: flex;
     justify-content: space-around;
+    width: 30%;
     padding-top: 0.2rem;
 }
 
@@ -34,40 +34,35 @@
     
     text-decoration: none;
     color: grey;
-    margin: auto;
     letter-spacing: 0.1rem;
+    margin: auto;
 }
 
 .coffee_category {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* background-color: blue; */
 }
 
 .coldBrew {
-    /* background-color: firebrick; */
     font-size: 30px;
     font-weight: bold;
-    padding: 25px 0 30px 0;
     margin-left: 5%;
+    padding: 25px 0 30px 0;
 }
 
 .route {
-    /* background-color: greenyellow; */
+    color: grey;
     margin-right: 6%;
     padding-top: 4rem;
-    color: grey;
 }
 
 .imgAndInfo {
-    background-color: darkcyan;
     display: flex;
     flex-direction: row;
 }
 
 .coffee_img {
-    background-color: darkgoldenrod;
     margin-left: 5%;
     margin-right: 10%;
 }
@@ -75,19 +70,15 @@
 .nameAndLike {
     display: flex;
     flex-direction: row;
-    
 }
 
 .coffee_info {
-    background-color: darkorange;
 }
 
 .coffee_name {
     margin: 0 30px 20px 20px;
     padding: 20px 20px 20px 20px 20px;
-    background-color: lightpink;
 }
 
 .footer {
-    background-color: deepskyblue;
 }
