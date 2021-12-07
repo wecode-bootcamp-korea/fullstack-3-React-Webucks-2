@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.List {
+  box-sizing: border-box;
+
+  .container {
+    .TopNav {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1%;
+      padding: 15px 0;
+      background-color: #f4f3ec;
+
+      .webucks {
+        margin-left: 1%;
+        font-family: 'Dancing Script', cursive;
+        font-size: 30px;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      .link {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        margin-right: 2%;
+        font-family: sans-serif;
+        font-size: small;
+      }
+
+      .menu {
+        color: #9a9a95;
+        list-style: none;
+      }
+    }
+    .category {
+      display: flex;
+      margin: 1% 0;
+      padding: 15px 0;
+      background-color: #f1f1ee;
+
+      #title1 {
+        margin-left: 1%;
+        margin-right: 10px;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+
+      #title2 {
+        margin-right: 10px;
+      }
+
+      #title3 {
+        font-family: sans-serif;
+        font-size: small;
+      }
+    }
+    .itemList {
+      display: flex;
+      flex-wrap: wrap;
+
+      .CoffeeCard {
+        flex: 25%;
+        display: flex;
+        flex-direction: column;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+          cursor: pointer;
+          object-fit: cover;
+          overflow: hidden;
+
+          a {
+            width: 250px;
+            height: 250px;
+          }
+
+          img {
+            width: 250px;
+          }
+
+          img:hover {
+            transform: scale(1.1);
+            transition: 3s;
+          }
+        }
+        .itemName {
+          margin: 20px auto;
+          text-align: center;
+          cursor: pointer;
+          font-size: 15px;
+          font-family: sans-serif;
+
+          a {
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .Footer {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: #262626;
+
+      ul {
+        padding-left: 0;
+
+        .footerListTitle {
+          padding-bottom: 2vh;
+        }
+      }
+
+      li {
+        margin-bottom: 1vh;
+        list-style: none;
+        color: white;
+        font-size: 10px;
+      }
+    }
+  }
+}

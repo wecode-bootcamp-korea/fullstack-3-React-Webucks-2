@@ -18,13 +18,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //종현님 components
 // import Login_zzang from './pages/zzang/Login/Login';
-// import List_zzang from './pages/zzang/List/List';
+// import List_zzang from './pages/zzang/List/List'
 // import Detail_zzang from './pages/zzang/Detail/Detail';
 
 //진웅님 components
-// import Login_woong from './pages/woong/Login/Login';
-// import List_woong from './pages/woong/List/List';
-// import Detail_woong from './pages/woong/Detail/Detail';
+import LoginWoong from './pages/woong/Login/Login_woong';
+import ListWoong from './pages/woong/List/List_woong';
+import DetailWoong from './pages/woong/Detail/Detail_woong';
 
 function Router() {
   return (
@@ -47,9 +47,9 @@ function Router() {
         {/* <Route path="/zzang/list" element={<List_zzang />} /> */}
         {/* <Route path="/zzang/detail" element={<Detail_zzang />} /> */}
         {/* //진웅님 route */}
-        {/* <Route path="/woong/" element={<Login_woong />} /> */}
-        {/* <Route path="/woong/list" element={<List_woong />} /> */}
-        {/* <Route path="/woong/detail" element={<Detail_woong />} /> */}
+        <Route path="/woong/" element={<LoginWoong />} />
+        <Route path="/woong/list" element={<ListWoong />} />
+        <Route path="/woong/detail" element={<DetailWoong />} />
       </Routes>
     </BrowserRouter>
   );
