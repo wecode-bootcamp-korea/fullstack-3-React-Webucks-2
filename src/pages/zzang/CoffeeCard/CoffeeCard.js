@@ -1,4 +1,6 @@
-import React from 'react';
+/*eslint-disable*/
+
+import '../List/List.scss';
 
 function CoffeeCard(props){
     return(
@@ -8,8 +10,8 @@ function CoffeeCard(props){
                     <a href="#">
                         <img src={props.item.img} alt={props.item.title} width="250px" height="300px"/>
                     </a>
-                </div>
-            <dd>{props.item.title}</dd>
+            </div>
+            <p>{props.item.title}</p>
         </li>
         </>
     )

@@ -31,8 +31,7 @@ function List() {
                 {/* 콜드 브루 아이템 리스트 */}
                 <div className="item_list">
                     <ul className="list">
-                    {/* <Link to="/Detail"/> */}
-                        {data.coldBrewCoffee&&
+                        {data.coldBrewCoffee &&
                         data.coldBrewCoffee.map( (e, i) =>  {
                             return <CoffeeCard key={i} item={e}/> 
                         })}
@@ -49,11 +48,10 @@ function List() {
                     <ul className="list_2">
                         {data.brewedCoffee&&
                         data.brewedCoffee.map( (e, i) =>  {
-                            return <CoffeeCard key={i} item={e}/> 
+                            return <CoffeeCard key={i} item={e}/>
                         })}
                     </ul>
             </div>
-            <Footer />
         </div> 
     )
 }

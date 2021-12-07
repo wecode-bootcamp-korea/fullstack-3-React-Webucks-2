@@ -59,7 +59,6 @@ function Detail() {
                         <span />
                             스타벅스 바리스타의 정성으로 탄생한 콜드 브루!
                             <br/>
-                            <br/>
                             콜드 브루 전용 원두를 차가운 물로 14시간 동안 추출하여 한정된 양만 제공됩니다.
                             <br/>
                             깊은 풍미의 새로운 커피 경험을 즐겨보세요.
@@ -72,7 +71,7 @@ function Detail() {
 
                     <div className="detail_info_kcal">
                         <div className="kcal">
-                            <p>1회 지공량 (kcal)</p>
+                            <p>1회 제공량 (kcal)</p>
                             <span>345</span>
                         </div>
                         <div className="kcal">
