@@ -4,13 +4,13 @@ function TopNav() {
   return (
     <div className="TopNav">
       <section className="webucks">
-        <a href="asdf">Webucks</a>
+        <a href="/woong">Webucks</a>
       </section>
       <div className="link">
-        <a className="menu" href="asdf">
+        <a className="menu" href="/woong/list">
           COFFEE
         </a>
-        <a className="menu" href="asdf">
+        <a className="menu" href="/woong/list">
           MENU
         </a>
         <a className="menu" href="asdf">
