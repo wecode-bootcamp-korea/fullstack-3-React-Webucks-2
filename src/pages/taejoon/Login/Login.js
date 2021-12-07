@@ -15,7 +15,7 @@ function Login() {
     const loginBTNStyle = {
         // state에 골뱅이 있음? -> 있으면 색상 변환
         backgroundColor: inputId.includes('@')
-        ? (inputPw.length > 5
+        ? (inputPw.length >= 5
             ? 'blue' : '#aed4ea')
             : '#aed4ea',
         };
@@ -23,9 +23,9 @@ function Login() {
         // onChange Id 이벤트 발생 시 호출할 함수
         const handleIdInput = (e) => {
         // 이벤트 발생 시 state로 지정한 inputID 업데이트
-            setinputId(e.targe.value);
+            setinputId(e.target.value);
             
-        };
+        }
         // onChange Pw 이벤트 발생 시 호출할 함수
         const handlePwInput = (e) => {
             setinputPw(e.target.value);
@@ -34,8 +34,7 @@ function Login() {
         
         //List 파일로 이동
         const goToList = () => {
-            console.log(`###HERE : ${document.getElementsByClassName('login_btn').style}`);
-            navigate("/taejoon/List");
+            inputId.includes('@') && inputPw.length >= 5 ? navigate("/taejoon/List") : alert('ID & PW 를  확인주세요')
         }
         
     return (
