@@ -12,9 +12,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import Detail_minho from './pages/minho/Detail/Detail';
 
 //태준님 components
-import Login_taejoon from './pages/taejoon/Login/Login';
-import List_taejoon from './pages/taejoon/List/List';
-import Detail_taejoon from './pages/taejoon/Detail/Detail';
+import LoginTaejoon from './pages/taejoon/Login/Login';
+import ListTaejoon from './pages/taejoon/List/List';
+import DetailTaejoon from './pages/taejoon/Detail/Detail';
 
 //종현님 components
 // import Login_zzang from './pages/zzang/Login/Login';
