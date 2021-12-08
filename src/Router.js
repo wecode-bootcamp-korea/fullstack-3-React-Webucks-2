@@ -7,9 +7,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import Detail_hyosang from './pages/hyosang/Detail/Detail';
 
 //민호님 components
-// import Login_minho from './pages/minho/Login/Login';
-// import List_minho from './pages/minho/List/List';
-// import Detail_minho from './pages/minho/Detail/Detail';
+import Login_mino from './pages/mino/Login/Login'
+import List_mino from './pages/mino/List/List'
+import Detail_mino from './pages/mino/Detail/Detail';
 
 //태준님 components
 // import Login_taejoon from './pages/taejoon/Login/Login';
@@ -35,9 +35,9 @@ function Router() {
         {/* <Route path="/hyosang/list" element={<List_hyosang />} /> */}
         {/* <Route path="/hyosang/detail" element={<Detail_hyosang />} /> */}
         {/* //민호님 route */}
-        {/* <Route path="/minho/" element={<Login_minho />} /> */}
-        {/* <Route path="/minho/list" element={<List_minho />} /> */}
-        {/* <Route path="/minho/detail" element={<Detail_minho />} /> */}
+        <Route path="/" element={<Login_mino />} />
+        <Route path="/mino/list" element={<List_mino />} />
+        <Route path="/mino/detail" element={<Detail_mino />} />
         {/* //태준님 route */}
         {/* <Route path="/taejoon/" element={<Login_taejoon />} /> */}
         {/* <Route path="/taejoon/list" element={<List_taejoon />} /> */}

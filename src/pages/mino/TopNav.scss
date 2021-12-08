@@ -1,0 +1,33 @@
+.navi {
+  // TopNav 전체적인 기본 스타일
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 0 5.5rem;
+  padding: 0 1.2rem;
+  background-color: #f6f5ef;
+  font-size: 0.8rem;
+  .nav-title {
+    font: {
+      family: 'Dancing Script', cursive;
+      size: 1.2rem;
+      weight: bold;
+    }
+  }
+
+  // 메뉴 리스트 스타일
+  .menu-lists {
+    display: flex;
+    justify-content: space-between;
+    color: #aaaaa5;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 500;
+    .menu-name {
+      padding: 0 0.7rem;
+    }
+    #last-menu-name {
+      padding-right: 0;
+    }
+  }
+}

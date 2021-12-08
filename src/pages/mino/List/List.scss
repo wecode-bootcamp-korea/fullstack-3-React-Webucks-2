@@ -1,0 +1,60 @@
+// Coffee Title Styles
+.list-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  margin: 1rem 5.5rem;
+  padding: 0 1.2rem;
+  background-color: #f6f5ef;
+  font-weight: bold;
+  font-size: 1.1vw;
+  .coffee-icon {
+    width: 30px;
+    padding-left: 1rem;
+    padding-right: 0.3rem;
+  }
+  .title-description {
+    font: {
+      weight: normal;
+      size: 0.8vw;
+    }
+  }
+}
+
+// Image Styles
+.cold-brew-coffee-container,
+.brewed-coffee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 5.1rem;
+  text-align: center;
+  margin: 1rem 5.5rem;
+  width: inherit;
+}
+
+.img-container {
+  display: flex;
+  position: static;
+  flex-direction: column;
+  flex-basis: 20%;
+  margin-bottom: 1.5rem;
+  margin-left: 0.1rem;
+  column-gap: 2rem;
+  font-size: 0.8vw;
+  overflow: hidden;
+  
+  .coffee-image {
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 0.7rem;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+#first-img-container {
+  margin-left: 0;
+}
