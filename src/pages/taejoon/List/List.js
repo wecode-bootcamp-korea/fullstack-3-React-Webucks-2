@@ -26,6 +26,7 @@ function List() {
             </div>
             <div className="coffeeImgDiv">
                 <ul className="coffeeImgUl">
+                    {/* (뒤조건 실행범위) && (실행할 함수)) */}
                     {coffeeList.coldBrewCoffee && coffeeList.coldBrewCoffee.map(coffeeList => (
                         <CoffeeCard data = {coffeeList} key = {coffeeList.id}/>
                     ))}
