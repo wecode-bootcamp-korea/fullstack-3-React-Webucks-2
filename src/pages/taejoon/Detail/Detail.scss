@@ -1,3 +1,7 @@
+p {
+    color: black;
+}
+
 .container-Detail {
     margin: 0;
 }
@@ -10,17 +14,14 @@
     background-color: 	#f4f3ec;
 }
 .main_logo {
-    
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
-    padding: 1% 2% 1% 2%;
-
+    padding: 1% 2%;
 }
 
 .category {
-    
     list-style: none;
     font-size: 0.9rem;
     display: flex;
@@ -48,31 +49,36 @@
     font-weight: bold;
     margin-left: 5%;
     padding: 25px 0 30px 0;
+    background-color: aqua;
 }
 
 .route {
     color: grey;
     margin-right: 6%;
     padding-top: 4rem;
+    background-color: aquamarine;
 }
 
 .imgAndInfo {
     display: flex;
     flex-direction: row;
+    background-color: blueviolet;
 }
 
 .coffee_img {
     margin-left: 5%;
     margin-right: 10%;
+    background-color: chartreuse 
 }
 
 .nameAndLike {
     display: flex;
     flex-direction: row;
+    background-color: chocolate;
 }
 
-.coffee_info {
-}
+// .coffee_info {
+// }
 
 .coffee_name {
     margin: 0 30px 20px 20px;
