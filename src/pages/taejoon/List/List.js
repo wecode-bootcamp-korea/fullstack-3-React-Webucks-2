@@ -10,7 +10,7 @@ function List() {
     const [coffeeList, setCoffeeList] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/data/mockdata.json")
+        fetch("http://localhost:3002/data/mockdata.json")
             .then(res => res.json())
             .then(data => setCoffeeList(data))
     }, []);
@@ -27,7 +27,7 @@ function List() {
             <div className="coffeeImgDiv">
                 <ul className="coffeeImgUl">
                     {/* (뒤조건 실행범위) && (실행할 함수)) */}
-                    {coffeeList.coldBrewCoffee && coffeeList.coldBrewCoffee.map(coffeeList => (
+                    {coffeeList[0] && coffeeList[0].coldBrewCoffee.map(coffeeList => (
                         <CoffeeCard data = {coffeeList} key = {coffeeList.id}/>
                     ))}
                 </ul>
@@ -39,7 +39,7 @@ function List() {
             </div>
             <div className="coffeeImgDiv">
                 <ul className="coffeeImgUl">
-                    {coffeeList.brewedCoffee && coffeeList.brewedCoffee.map(coffeeList => (
+                    {coffeeList[1] && coffeeList[1].brewedCoffee.map(coffeeList => (
                         <CoffeeCard data = {coffeeList} key = {coffeeList.id}/>
                     ))}
                 </ul>

@@ -1,126 +1,130 @@
-{
-  "coldBrewCoffee": [
-    {
-      "id": 1,
-      "img": "/images/vanilla_coldbrew.jpeg",
-      "title": "나이트로 바닐라 크림",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
+[
+  {
+    "coldBrewCoffee": [
+      {
+        "id": 1,
+        "img": "/images/vanilla_coldbrew.jpeg",
+        "title": "나이트로 바닐라 크림",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 2,
+        "img": "/images/nitro_coldbrew.jpeg",
+        "title": "나이트로 콜드 브루",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 3,
+        "img": "/images/dolce_coldbrew.jpg",
+        "title": "돌체 콜드 브루",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 4,
+        "img": "/images/pumpkin_coldbrew.jpeg",
+        "title": "벨벳 다크 모카 나이트로",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 5,
+        "img": "/images/vanilla_cream.jpg",
+        "title": "바닐라 크림 콜드 브루",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 6,
+        "img": "/images/toffeenut_coldbrew.jpeg",
+        "title": "제주 비자림 콜드 브루",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 7,
+        "img": "/images/coldbrew.jpeg",
+        "title": "콜드 브루",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 8,
+        "img": "/images/coldbrew_molt.jpg",
+        "title": "콜드 브루 몰트",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 9,
+        "img": "/images/coldbrew_oatmeal.jpeg",
+        "title": "콜드 브루 오트 라떼",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 10,
+        "img": "/images/hazelnut_coldbrew.jpeg",
+        "title": "콜드 브루 헤이즐넛",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
       }
-    },
-    {
-      "id": 2,
-      "img": "/images/nitro_coldbrew.jpeg",
-      "title": "나이트로 콜드 브루",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
+    ]
+  },
+  {
+    "brewedCoffee": [
+      {
+        "id": 1,
+        "img": "/images/iced_coffee.jpeg",
+        "title": "아이스 커피",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
+      },
+      {
+        "id": 2,
+        "img": "/images/french.jpg",
+        "title": "프렌치 애플 타르트 나이트로",
+        "size": {
+          "tall": 3900,
+          "grande": 4400,
+          "venti": 4900
+        }
       }
-    },
-    {
-      "id": 3,
-      "img": "/images/dolce_coldbrew.jpg",
-      "title": "돌체 콜드 브루",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    },
-    {
-      "id": 4,
-      "img": "/images/pumpkin_coldbrew.jpeg",
-      "title": "벨벳 다크 모카 나이트로",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    },
-    {
-      "id": 5,
-      "img": "/images/vanilla_cream.jpg",
-      "title": "바닐라 크림 콜드 브루",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    },
-    {
-      "id": 6,
-      "img": "/images/toffeenut_coldbrew.jpeg",
-      "title": "제주 비자림 콜드 브루",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    },
-    {
-      "id": 7,
-      "img": "/images/coldbrew.jpeg",
-      "title": "콜드 브루",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    },
-    {
-      "id": 8,
-      "img": "/images/coldbrew_molt.jpg",
-      "title": "콜드 브루 몰트",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    },
-    {
-      "id": 9,
-      "img": "/images/coldbrew_oatmeal.jpeg",
-      "title": "콜드 브루 오트 라떼",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    },
-    {
-      "id": 10,
-      "img": "/images/hazelnut_coldbrew.jpeg",
-      "title": "콜드 브루 헤이즐넛",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    }
-  ],
-  "brewedCoffee": [
-    {
-      "id": 1,
-      "img": "/images/iced_coffee.jpeg",
-      "title": "아이스 커피",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    },
-    {
-      "id": 2,
-      "img": "/images/french.jpg",
-      "title": "프렌치 애플 타르트 나이트로",
-      "size": {
-        "tall": 3900,
-        "grande": 4400,
-        "venti": 4900
-      }
-    }
-  ]
-}
+    ]
+  }
+]
