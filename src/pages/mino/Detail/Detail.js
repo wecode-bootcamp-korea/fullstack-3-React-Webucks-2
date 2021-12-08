@@ -15,9 +15,7 @@ function Detail() {
   const [commentsData, setCommentsData] = useState([]);
 
     useEffect(() => {
-    fetch('http://localhost:3000/data/comment_mino.json', {
-      method: 'GET',
-    })
+    fetch('http://localhost:3000/data/comment_mino.json')
     .then((res)=>res.json())
     .then((res) => { setCommentsData(res);
     });
@@ -130,26 +128,13 @@ function Detail() {
               return (
                 <Comment key={i} text={e} index={i} addComment={addComment} setAddComment={setAddComment} />);
             })}
-            {/* <p className="review-comments">
-              <span className="reviewer">coffee-lover</span>
-              너무 맛있어요!
-            </p>
-            <p className="review-comments">
-              <span className="reviewer">CHOCO7</span>
-              오늘도 화이트 초콜릿 모카를 마시러 갑니다.
-            </p>
-            <p className="review-comments">
-              <span className="reviewer">legend_dev</span>
-              진짜 화이트 초콜릿 모카는 전설이다ㅏ. 진짜 화이트 초콜릿 모카는
-              전설이다. 진짜 화이트 초...
-            </p> */}
 
-              <input
-                type="text"
-                className="review-input"
-                placeholder="리뷰를 입력해주세요."
-                onKeyDown={(e) => { submitComment(e); }}
-              />
+            <input
+              type="text"
+              className="review-input"
+              placeholder="리뷰를 입력해주세요."
+              onKeyDown={(e) => { submitComment(e); }}
+            />
           </section>
         </div>
       </section>
