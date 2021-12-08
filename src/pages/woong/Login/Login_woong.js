@@ -8,6 +8,17 @@ function Login() {
   const [pw, setPw] = useState('');
   const condition = id.includes('@') && pw.length >= 5;
 
+  function validation() {
+    let isIdValid = id.includes('@');
+    let isPwValid = pw.length >= 5;
+
+    if (isIdValid && isPwValid) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   const goToList = () => {
     condition === true && navigate('/woong/list');
   };

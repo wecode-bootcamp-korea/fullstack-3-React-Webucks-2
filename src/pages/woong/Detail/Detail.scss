@@ -125,9 +125,16 @@
       }
     }
     .coffeeDetail {
+      display: flex;
+      flex-direction: column;
       border-bottom: 1px solid;
       padding: 1%;
+
+      p {
+        margin: 0.5% 0;
+      }
     }
+
     .nutritionTitle {
       display: flex;
       justify-content: space-between;
@@ -135,6 +142,7 @@
       padding: 1%;
       border-bottom: 1px solid;
     }
+
     .nutritionDetail {
       padding: 2% 0;
 

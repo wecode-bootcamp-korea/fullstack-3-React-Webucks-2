@@ -1,0 +1,24 @@
+{
+  "CoffeeDetail": [
+    {
+      "id": 1,
+      "categoryName": "콜드 브루",
+      "traceCategory1": "홈",
+      "traceCategory2": "MENU",
+      "traceCategory3": "음료",
+      "coffeeKorName": "토피 넛 콜드 브루",
+      "coffeeEngName": "Toffee Nut Cold Brew",
+      "coffeeImg": "/images/vanilla_coldbrew.jpeg",
+      "coffeeDetailRow1": "콜드 브루로 깔끔하게 즐기는 토피 넛 음료!",
+      "coffeeDetailRow2": "드디어 출시된 토피 넛 콜드 브루!",
+      "coffeeDetailRow3": "부드러운 토피 넛 폼과 어우러지는 콜드 브루의 깔끔함",
+      "제공량": 195,
+      "포화지방": 10,
+      "단백질": 1,
+      "나트륨": 55,
+      "당류": 18,
+      "카페인": 150,
+      "causeAllregic": "우유"
+    }
+  ]
+}
