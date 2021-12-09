@@ -2,6 +2,7 @@ import "./List.scss";
 import TopNav from "../components/TopNav";
 import React, { useEffect, useState } from "react";
 import CoffeeCard from "../components/CoffeeCard";
+// import API_HOST from "../api"
 
 function List() {
   //coffee List state 선언

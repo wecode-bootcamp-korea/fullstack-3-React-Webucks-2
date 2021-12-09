@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router";
+import LOGIN_POST from "../api";
 import "./Login.scss";
 
 function Login() {
@@ -7,7 +8,7 @@ function Login() {
   // 참고: [상태 변수, 상태 업데이트 함수] = 상태 변경 hook(상태 변수에 할당할 기본값);
   const [inputId, setInputId] = useState("");
   const [inputPw, setInputPw] = useState("");
-  
+
   // useNavigation 변수할당
   const navigate = useNavigate();
 
@@ -34,14 +35,51 @@ function Login() {
     setInputPw(e.target.value);
   };
 
+  const logincheck = (id, pw) => {
+    let getStatus = 0;
+    fetch("/users/login", {
+      headers: {
+        "content-type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(function(res){
+        getStatus = res.status;
+        return res.json();
+      } )
+      .then((data) => {
+        if (getStatus === 400) {
+          console.log(data);
+        }
+
+        if (getStatus === 200) {
+          navigate("/taejoon/List");
+          console.log(data);
+          localStorage.setItem("token", data.token);
+          console.log(`save token complete!!!!!!`)
+          console.log(localStorage.getItem("token"))
+        }
+      });
+  };
+
   //List 파일로 이동
   const goToList = () => {
-      if (!inputId.includes("@")) return alert("ID & PW 를  확인주세요");
-      
-      if (inputPw.length < 6) return alert("ID & PW 를  확인주세요");
+    // Id, Pw 입력 -> 회원가입 POST -> return message -> 회원가입 완료시 -> 발행되는 토큰 localStorage.setItem("key", "value") 저장
 
-      return navigate("/taejoon/List")
-    
+    //로그인 adr
+
+    //회원가입 adr
+    // console.log(`###HERE`)
+
+    if (!inputId.includes("@")) return alert("ID & PW 를  확인주세요");
+
+    if (inputPw.length < 6) return alert("ID & PW 를  확인주세요");
+
+    return logincheck(inputId, inputPw);
   };
 
   return (

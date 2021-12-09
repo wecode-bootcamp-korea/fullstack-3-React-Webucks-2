@@ -1,12 +1,9 @@
 import "./Detail.scss";
 import TopNav from "../components/TopNav";
-import React, {useEffect, useState} from 'react'
-
+import React, { useEffect, useState } from "react";
 
 function Detail() {
-  
-  
-    return (
+  return (
     <div className="containerDetail">
       <TopNav />
       <div className="coffee_category">
@@ -21,9 +18,9 @@ function Detail() {
         </div>
         <div className="coffee_info">
           <div className="nameAndLike">
-            <div className="coffee_name">
+            <div className="coffeeName">
               <h2>화이트 초콜릿 모카</h2>
-              <p>white Chocolate Mocha</p>
+              <p className="enCoffeeName">white Chocolate Mocha</p>
             </div>
             <div className="heart_icon">하트뿅</div>
           </div>
