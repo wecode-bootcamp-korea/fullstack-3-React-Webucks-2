@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import LoginButton from '../components/LoginButton';
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
+  /* ID & Password Validation */ 
   const [IDData, setIDData] = useState(''); 
   const [PWData, setPWData] = useState(''); 
   let isValid = false, isDisabled = false, BgColor;
@@ -17,12 +18,24 @@ function LoginForm() {
   isValid = validate(IDData, PWData);
   isDisabled = btnDisabled(isValid); 
   BgColor = btnBgColor(isValid);
+
+  const navigate = useNavigate(); 
+
+  const GoToListPage = (e) => {
+    if (isValid) {
+        navigate('/hyosang/list');
+    }
+    else {
+      alert("ID 또는 Password가 유효하지 않습니다");
+    }
+  }
   
   return (
         <form className = "form-div">  
             <input className = "inputBox" id = "inputId" type = "text" placeholder = "전화번호, 사용자 이름 또는 이메일" onChange={ handleIDInput }/> 
             <input className = "inputBox" id = "inputPw" type = "password" placeholder = "비밀번호" onChange={ handlePWInput }/>
-            <LoginButton loginIsValid={ isValid } btnIsDisabled={ isDisabled } btnBg={ BgColor }></LoginButton>
+            {isDisabled ? <button className = "buttonBox" id = "loginButton" onClick={ GoToListPage } disabled={ true }>로그인</button> 
+          : <button className = "buttonBox" id = "loginButton" onClick={ GoToListPage }  style={{backgroundColor: BgColor}} >로그인</button>}
         </form> 
   );
 }

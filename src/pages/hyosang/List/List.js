@@ -43,7 +43,7 @@ function List() {
           <article className = "list-container01"> 
             <ul className = "image-list">
               {coffeeCards[0] && coffeeCards[0].coldBrewCoffee.map((coffeeCard) => (
-              <CoffeeCard coffee = {coffeeCard} coffeeKey = {coffeeCard.id} />
+              <CoffeeCard coffee = {coffeeCard} coffeeKey = {coffeeCard.id} key = {coffeeCard.id} />
               ))}
             </ul>
           </article>
@@ -61,7 +61,7 @@ function List() {
           <article className = "list-container02"> 
             <ul className = "image-list">
               {coffeeCards[1] && coffeeCards[1].brewedCoffee.map((coffeeCard) => (
-              <CoffeeCard coffee = {coffeeCard} />
+              <CoffeeCard coffee = {coffeeCard} key={coffeeCard.id} />
               ))}
             </ul>
           </article>

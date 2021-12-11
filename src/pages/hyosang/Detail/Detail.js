@@ -1,14 +1,29 @@
-import './Detail.scss';
 import { useState } from 'react';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import Comment from '../components/Comment';
+import './Detail.scss';
 
 function Detail() {
+    /* 하트 클릭시 빨간색으로, 재클릭시 원위치로 하게 해주는 state문 */
     const [likeState, setLikeState] = useState(); 
-
+    
     const setUpLike = () => {
         setLikeState(!likeState); 
     }; 
 
+    /* 리뷰란에 댓글 달게 해주는 state문 */
+    const [commentArr, setCommentArr] = useState([]); 
+
+    const leaveComment = (e) => {
+      let inputData = e.target.value;
+      if (e.keyCode === 13 && inputData.length !== 0) {
+          let commentAndId = [...commentArr];
+          commentAndId.push({myID: 'hyosangPark', myContent: inputData});
+          setCommentArr(commentAndId);
+          e.target.value = '';
+      } 
+    }
+ 
     return (
       <div className = "Detail">
         <header className = "main-header"> 
@@ -104,9 +119,15 @@ function Detail() {
             <footer className = "review">
               <h3 className = "review-header">리뷰</h3> 
               <p className = "review-all">
-                 <ul className = "review-list"></ul>
+                 <ul className = "review-list">
+                   {commentArr.map((element,index)=>{
+                     return (
+                       <Comment key={index} text={element} index={index} commentArr={commentArr} />
+                     ); 
+                   })} 
+                 </ul>
               </p>
-              <input className = "review-input" placeholder = "리뷰를 입력해주세요." />
+              <input className = "review-input" type = "text" placeholder = "리뷰를 입력해주세요." onKeyDown={(e) => { leaveComment(e); }}/>
             </footer> 
           </article> 
         </section>
@@ -151,6 +172,5 @@ function Detail() {
       </div>
     );
 }
-
 
 export default Detail;
