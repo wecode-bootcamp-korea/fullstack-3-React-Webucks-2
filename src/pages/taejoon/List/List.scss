@@ -1,0 +1,77 @@
+.header {
+    background-color: 	#f4f3ec;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+    
+}
+.main_logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    padding: 1% 2%;
+
+}
+
+.category {
+    list-style: none;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    padding-top: 0.2rem;
+}
+
+.category_li {
+    text-decoration: none;
+    color: grey;
+    letter-spacing: 0.1rem;
+    margin: auto;
+}
+
+.coffeeType {
+    background-color: #f1f1ef;
+    width: 90%;
+    margin: 1.5% auto;
+}
+
+.coffeeTypeSpan {
+    margin-left: 2%;
+    font-size: 1rem;
+}
+
+#coffee_icon {
+    font-size: 1.2rem;
+    margin-left: 0.5%;
+    margin-right: 0.2%;
+    padding: 1%;
+}
+
+.summary {
+    font-size: 0.75rem;    
+    padding: 1% 1% 1% 0%;
+}
+
+.coffeeImgDiv  {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.coffeeImgUl {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0;
+}
+
+.coffeeImgLi {
+    list-style: none;
+}
+
+.pngImg {
+    width: 18em;
+    height: 18em;
+    margin: 0 5% 5% 0;
+}
